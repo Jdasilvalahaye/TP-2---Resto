@@ -1,0 +1,76 @@
+header {
+  background: url(../img/bg-slider-06.jpg) center/cover;
+  // rappel : padding 0 haut et bas et 5O côtés
+  padding: 0 50px;
+  color: $white;
+
+  // Le header fera au total 100vh (il prendra tout l'écran quand on arrivera sur la page)
+  // la nav à 3 enfants : logo, elements et icones
+  // Pour rappel en sass on paramètre les enfants DANS le parent
+  nav {
+    height: 12vh;
+    display: grid;
+    grid-template-columns: 10% 82% 8%;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .logo {
+      font-family: $font1;
+      font-weight: 100;
+      font-size: 2rem;
+      text-align: left;
+    }
+    ul {
+      @include alignChildren(space-around);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      padding: 0 30px;
+      cursor: pointer;
+    }
+    .nav-icons {
+      @include alignChildren(space-around);
+      font-size: 0.8rem;
+      // Dans nav-icons il y a tous les i (font awesome) qui sont des enfants : on applique un effet grossit quand on passe dessu + curseur
+      i {
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+  // header-text est le frère de nav donc on en sort (tout en restant dans le header qui est le parent
+  .header-text {
+    @include childCenter;
+    height: 88vh;
+
+    div {
+      // On lui demande de remonter de 150px
+      margin-top: -150px;
+      h2 {
+        font-family: $font1;
+        font-size: 3rem;
+        font-weight: 100;
+        color: $color1;
+      }
+      h1 {
+        font-size: 3.2rem;
+        letter-spacing: 10px;
+        font-weight: 700;
+        margin-top: -28px;
+        font-family: $font2;
+      }
+      img {
+        height: 27px;
+        margin: 32px 0;
+      }
+      h6 {
+        font-size: 0.75rem;
+        letter-spacing: 6px;
+        font-weight: 100;
+      }
+    }
+  }
+}

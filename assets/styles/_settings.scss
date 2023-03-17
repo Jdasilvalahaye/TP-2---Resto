@@ -1,0 +1,55 @@
+// On commence par instancier nos fonts
+@font-face {
+  font-family: "Allura";
+  src: url(../fonts/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+// On les stocks dans des variables pour les appeler rapidement
+// Pour rappel les variables en sass c'est $nameofvariable
+// On fait de même pour les couleurs du projet.
+// Tips : les blancs / gris / noirs les appeler ainsi car il y en a toujours, pour les couleurs spé utiliser colorX au cas ou on change
+$font1: Allura, cursive;
+$font2: Poppins, serif;
+$font3: Roboto, serif;
+$white: #eee;
+$black: #21201e;
+$grey: rgb(182, 182, 182);
+$color1: rgb(166, 114, 69);
+
+// On fait nos mixins
+// Sert à centrer l'enfant unique
+@mixin childCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Sert à aligner plusieurs enfants
+// Ici le paramètre space on l'appelera quand on en aura besoin, il n'est pas défini. En gros on appelle la mixin comme ça :
+// @include alignChildren(space-around) > le justify content se fera en space around. On peut aussi dire center etc.
+@mixin alignChildren($space) {
+  display: flex;
+  align-items: center;
+  justify-content: $space;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  // Avec ça les boites côte à côte se terminent au même niveau
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+body {
+  text-align: center;
+  font-family: $font3;
+  background: $black;
+}
