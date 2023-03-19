@@ -32,6 +32,7 @@
   <body>
     <!-- Header à deux enfants : 1 nav et 2 header-text -->
     <header>
+      <!-- Enfant 1 -->
       <nav>
         <div class="logo">
           <h3>Resto Nono</h3>
@@ -51,6 +52,7 @@
           <i class="fab fa-instagram"></i>
         </div>
       </nav>
+      <!-- Enfant 2 -->
       <div class="header-text">
         <div>
           <h2>Welcome to</h2>
@@ -60,5 +62,158 @@
         </div>
       </div>
     </header>
+
+    <!-- Section avec 2 enfants -->
+    <section class="section1">
+      <!-- Enfant 1 -->
+      <div class="intro-text">
+        <h2>Découvrir</h2>
+        <h3>Notre boutique</h3>
+        <img src="./assets/img/ic-plate.png" alt="icon-plate" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At tenetur eaque minima, a earum perferendis
+          explicabo? Consequuntur ea consequatur facere.
+        </p>
+        <img src="./assets/img/avatarchef.webp" alt="chef resto picture" />
+        <h4>Nono</h4>
+        <h5>La cheffe</h5>
+      </div>
+      <!-- Enfant 2 -->
+      <div class="intro-pic"></div>
+    </section>
+
+    <section class="section2">
+      <h2>Découvrir</h2>
+      <img src="./assets/img/ic-plate.png" alt="icon-plate" />
+      <ul>
+        <li>Petit déjeuner</li>
+        <li>Déjeuner</li>
+        <li>Diner</li>
+        <li>Boissons</li>
+        <li>Autres</li>
+      </ul>
+      <!-- Ici la classe meals aura 8 enfants "meal" -->
+      <div class="meals">
+        <div class="meal">
+          <img src="./assets/img/dish-item-01.jpg" alt="meal-1" />
+          <div class="meal-text">
+            <h3>Italian source mushroom</h3>
+            <p>Champignon / Ail / Légumes</p>
+          </div>
+          <p>12€</p>
+        </div>
+        <div class="meal">
+          <img src="./assets/img/dish-item-02.jpg" alt="meal-2" />
+          <div class="meal-text">
+            <h3>Pommes de terre à l'ail</h3>
+            <p>Pomme de terre / Ail / Huile d'olive</p>
+          </div>
+          <p>12€</p>
+        </div>
+        <div class="meal">
+          <img src="./assets/img/dish-item-03.jpg" alt="meal-3" />
+          <div class="meal-text">
+            <h3>Tenu Roast Source</h3>
+            <p>Tuna / Potatoes / Riz</p>
+          </div>
+          <p>15€</p>
+        </div>
+        <div class="meal">
+          <img src="./assets/img/dish-item-04.jpg" alt="meal-4" />
+          <div class="meal-text">
+            <h3>Roti de porc (4pièce)</h3>
+            <p>Porc / Légumes / Shoyu</p>
+          </div>
+          <p>18€</p>
+        </div>
+        <div class="meal">
+          <img src="./assets/img/dish-item-05.jpg" alt="meal-5" />
+          <div class="meal-text">
+            <h3>Poulet frit</h3>
+            <p>Poulet / Huile d'olive / Sel</p>
+          </div>
+          <p>20€</p>
+        </div>
+        <div class="meal">
+          <img src="./assets/img/dish-item-06.jpg" alt="meal-6" />
+          <div class="meal-text">
+            <h3>Crabe au curry</h3>
+            <p>Crabe / Potatoes / Riz</p>
+          </div>
+          <p>14€</p>
+        </div>
+        <div class="meal">
+          <img src="./assets/img/dish-item-07.jpg" alt="meal-7" />
+          <div class="meal-text">
+            <h3>Steak de saumon</h3>
+            <p>Saumon / Légumes / Huile</p>
+          </div>
+          <p>16€</p>
+        </div>
+        <div class="meal">
+          <img src="./assets/img/dish-item-08.jpg" alt="meal-8" />
+          <div class="meal-text">
+            <h3>Galette de pomme de terre</h3>
+            <p>Pomme de terre / Pain / Fromage</p>
+          </div>
+          <p>25€</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section avec 2 enfants -->
+    <section class="section3">
+      <!-- Enfant 1 -->
+      <div class="form-content">
+        <div class="hours">
+          <div class="hours-content">
+            <h3>Heures</h3>
+            <h4>D'ouverture</h4>
+            <img src="./assets/img/ic-plate.png" alt="icon-plate" />
+            <h5>lundi-vendredi</h5>
+            <p>7h-11h (Petit déjeuner)</p>
+            <p>11h-22h (Déjeuner/Diner)</p>
+            <p>Samedi</p>
+            <p>8h-13h (Brunch)</p>
+            <p>13h-21h (Déjeuner/diner)</p>
+            <h5>+33 01 01 01 01 01</h5>
+          </div>
+        </div>
+        <!-- Enfant 2 -->
+        <div class="form-infos">
+          <div class="form-infos-container">
+            <h2>Réservation</h2>
+            <h3>RESERVATIONS EN LIGNE</h3>
+            <img src="./assets/img/ic-plate.png" alt="icon-plate" />
+            <div class="form-inputs">
+              <select name="" id="people">
+                <option value="">Nombre de personnes</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+              <input
+                type="date"
+                id="booking-date"
+                name="booking-date"
+                value="2023-03-19"
+                min="2023-03-19"
+                max="2023-12-31"
+              />
+              <input type="time" id="booking-time" name="booking-time" min="07:00" max="21:00" />
+              <input type="text" placeholder="Nom" />
+              <input type="text" placeholder="Téléphone" />
+              <input type="text" placeholder="Email" />
+            </div>
+            <button>RESERVER MAINTENANT</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

@@ -1,0 +1,95 @@
+.section2 {
+  color: $white;
+  padding-bottom: 100px;
+  // On met la section en relative car on va ajouter un after (élément qu'on met où on veut, comme le before. L'after doit donc avoir une position)
+  // Pour ça qu'on met son parent en relative
+  position: relative;
+
+  &:after {
+    // Toujours un contenu, même vide
+    content: "";
+    position: absolute;
+    height: 620px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../img/bg-menu-01.jpg) center/cover;
+    bottom: -330px;
+  }
+  h2 {
+    color: $color1;
+    font-size: 2rem;
+    font-family: $font1;
+    font-weight: 500;
+    padding: 60px 0px 30px;
+  }
+  ul {
+    @include alignChildren(space-around);
+    width: 50%;
+    margin: 30px auto;
+    // Mettre une min width évite que l'élément se ressere trop si je réduis l'écran, comme il doit faire 50% de l'écran, ça risque de devenir trop petit
+    // Donc au plus petit il fera quand même 500px
+    min-width: 500px;
+
+    li {
+      border-bottom: 1px solid $grey;
+      padding-bottom: 8px;
+    }
+  }
+  .meals {
+    background: $white;
+    color: $black;
+    width: 85%;
+    // inverse de la min. Evite que ce soit trop étalé quand on agrandit la fenêtre
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 4px solid $color1;
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    z-index: 100;
+    // Sinon le z index marche pas comme l'after est en absolute, on doit mettre cet élément en relative pour qu'il repasse devant avec z-index
+    position: relative;
+
+    .meal {
+      // Ici la grid de chaque plat pour disposer l'image, le nom les prix
+      display: grid;
+      grid-template-columns: 25% 60% 15%;
+      border-bottom: 1px dashed $grey;
+      padding: 30px 0;
+      margin: 0 20px;
+
+      img {
+        border-radius: 50px;
+        object-fit: cover;
+        width: 100%;
+        align-self: center;
+      }
+      .meal-text {
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 10px;
+        height: 100%;
+
+        h3 {
+          text-transform: uppercase;
+          color: $black;
+          font-size: 0.8rem;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+      }
+      // > ton enfant direct
+      // On ne va toucher que les p du prix car ils sont l'enfant direct du meals et pas l'enfant d'un enfant
+      > p {
+        color: $color1;
+        font-weight: 600;
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
+    }
+  }
+}
